@@ -27,7 +27,9 @@ function App() {
     );
     const randomIndex = Math.floor(Math.random() * unusedContacts.length);
 
-    setContacts([...contacts, unusedContacts[randomIndex]]);
+    if (unusedContacts.length) {
+      setContacts([...contacts, unusedContacts[randomIndex]]);
+    }
   }
 
   function sortBy(x) {
